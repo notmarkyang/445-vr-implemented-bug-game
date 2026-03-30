@@ -3,6 +3,8 @@ using UnityEngine;
 public class FinalTankReunionInteractable : BaseInteractable
 {
     [SerializeField] private TankReturnBugVisualState visualState;
+    [Header("Face Player")]
+    [SerializeField] private FacePlayerOnInteract facePlayer;
 
     public override void Interact()
     {
@@ -11,6 +13,7 @@ public class FinalTankReunionInteractable : BaseInteractable
 
         if (GameState.Instance == null)
             return;
+        facePlayer?.FaceOnce();
 
         GameState gs = GameState.Instance;
 
