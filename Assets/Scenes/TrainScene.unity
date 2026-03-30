@@ -380,6 +380,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: 00b8a2a1f1666e448846c4a29f643740, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce1e951d1a758c245b6d640fbb5c9848, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 00b8a2a1f1666e448846c4a29f643740, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce1e951d1a758c245b6d640fbb5c9848, type: 2}
     - target: {fileID: 919132149155446097, guid: 00b8a2a1f1666e448846c4a29f643740, type: 3}
       propertyPath: m_Name
       value: station_interior
@@ -574,6 +582,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019999998, y: 0.019999994, z: 0.019999996}
   m_Center: {x: 0, y: 0.0000000018626451, z: 0.000000010244548}
+--- !u!114 &321074959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518899284880179293, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1966424854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966424858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c500f2a52a5eb4a952658e1bf51e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &361077873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 20d99199281be744c8c38116e6a8c30e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2860,6 +2879,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1966424860}
+    - targetCorrespondingSourceObject: {fileID: 5518899284880179291, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1966424863}
   m_SourcePrefab: {fileID: 100100000, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
 --- !u!1 &1966424855 stripped
 GameObject:
@@ -2880,6 +2902,11 @@ MonoBehaviour:
 --- !u!4 &1966424857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758326848202, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1966424854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1966424858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518899284880179291, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
   m_PrefabInstance: {fileID: 1966424854}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1966424859 stripped
@@ -2934,6 +2961,29 @@ MonoBehaviour:
   giantWorldScale: {x: 500, y: 500, z: 500}
   normalMoveSpeed: 2.5
   smallMoveSpeed: 33
+--- !u!114 &1966424863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966424858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3297308fa42493d46802742dec84ad81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadTurnVignetteProvider
+  headTransform: {fileID: 1966424857}
+  vignetteController: {fileID: 321074959}
+  yawOnly: 1
+  minTurnSpeed: 22
+  maxTurnSpeed: 130
+  idleAperture: 1
+  maxVignetteAperture: 0.562
+  feathering: 0.2
+  easeInTime: 0.01
+  easeOutTime: 0.3
+  responseSpeed: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
