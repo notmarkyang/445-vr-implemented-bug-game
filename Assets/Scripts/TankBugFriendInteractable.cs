@@ -25,7 +25,7 @@ public class TankBugFriendInteractable : BaseInteractable
             gs.TalkToTankBug();
 
             StoryTextUI.Instance?.ShowLines(
-                "Oh, are you looking for Samsung 30 22.1 Cu. Ft. Stainless Steel French Door Refrigerator - RF22A4111SR/AA?",
+                "Oh, are you looking for Benni",
                 "They got curious and wandered off.",
                 "I think they headed toward the train station."
             );
