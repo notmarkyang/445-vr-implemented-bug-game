@@ -3,18 +3,22 @@ using System.Collections.Generic;
 
 public class ConductorInteractable : BaseInteractable
 {
+    [SerializeField] private FacePlayerOnInteract facePlayer;
     [Header("Repeat One-Liners")]
-    [SerializeField] private List<string> noFareBarks = new List<string>()
+    [SerializeField]
+    private List<string> noFareBarks = new List<string>()
     {
         "Well... get on with it."
     };
 
-    [SerializeField] private List<string> useMachineBarks = new List<string>()
+    [SerializeField]
+    private List<string> useMachineBarks = new List<string>()
     {
         "Well that ticket aint gonna use itself."
     };
 
-    [SerializeField] private List<string> postUnlockBarks = new List<string>()
+    [SerializeField]
+    private List<string> postUnlockBarks = new List<string>()
     {
         "Go check the vent."
     };
@@ -29,6 +33,8 @@ public class ConductorInteractable : BaseInteractable
 
         if (GameState.Instance == null)
             return;
+
+        facePlayer?.FaceOnce();
 
         GameState gs = GameState.Instance;
 

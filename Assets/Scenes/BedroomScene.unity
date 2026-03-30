@@ -201,6 +201,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
       insertIndex: -1
       addedObject: {fileID: 12628901}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 12628905}
   m_SourcePrefab: {fileID: 100100000, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
 --- !u!4 &12628899 stripped
 Transform:
@@ -246,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BugNPCInteractable
   promptText: Interact
+  facePlayer: {fileID: 12628905}
   bigSizeLines:
   - Ew, a bug.
   beforeTankInspectionLines:
@@ -357,6 +361,19 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &12628905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12628900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739619b0180d50a47bc502dafcaa09df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayerOnInteract
+  playerCamera: {fileID: 1704380573}
 --- !u!1 &14634940
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +723,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
       insertIndex: -1
       addedObject: {fileID: 74065985}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 74065989}
   m_SourcePrefab: {fileID: 100100000, guid: 9eedb81cf27189e4992fab89b8dde310, type: 3}
 --- !u!4 &74065983 stripped
 Transform:
@@ -838,6 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BugNPCInteractable
   promptText: Interact
+  facePlayer: {fileID: 74065989}
   bigSizeLines:
   - Ew, a bug.
   beforeTankInspectionLines:
@@ -864,6 +885,19 @@ MonoBehaviour:
   - Strange day today...
   fallbackLines:
   - '*Bug noises*'
+--- !u!114 &74065989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74065984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739619b0180d50a47bc502dafcaa09df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayerOnInteract
+  playerCamera: {fileID: 1704380573}
 --- !u!1 &82031854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,6 +1994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BugNPCInteractable
   promptText: Interact
+  facePlayer: {fileID: 0}
   bigSizeLines:
   - I don't really want to go outside.
   - I'm a NEET.

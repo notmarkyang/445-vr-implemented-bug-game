@@ -599,6 +599,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f4895d6ba11c7b4e86605861f775417, type: 3}
       insertIndex: -1
       addedObject: {fileID: 138435328}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f4895d6ba11c7b4e86605861f775417, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 138435332}
   m_SourcePrefab: {fileID: 100100000, guid: 9f4895d6ba11c7b4e86605861f775417, type: 3}
 --- !u!4 &138435326 stripped
 Transform:
@@ -644,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankBugFriendInteractable
   promptText: Interact
+  facePlayer: {fileID: 138435332}
 --- !u!114 &138435330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +735,19 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &138435332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138435327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739619b0180d50a47bc502dafcaa09df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayerOnInteract
+  playerCamera: {fileID: 1101597705}
 --- !u!1 &176765991
 GameObject:
   m_ObjectHideFlags: 0
@@ -9734,6 +9751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BugNPCInteractable
   promptText: Interact
+  facePlayer: {fileID: 0}
   bigSizeLines:
   - Ew, a bug.
   beforeTankInspectionLines:
