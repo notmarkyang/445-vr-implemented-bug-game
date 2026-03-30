@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 425701947}
   - component: {fileID: 425701950}
   - component: {fileID: 425701949}
+  - component: {fileID: 425701951}
   m_Layer: 0
   m_Name: WorkerAnt
   m_TagString: Untagged
@@ -761,6 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BugNPCInteractable
   promptText: Interact
+  facePlayer: {fileID: 425701951}
   bigSizeLines:
   - Ew, a bug.
   beforeTankInspectionLines:
@@ -869,6 +871,19 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &425701951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425701945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739619b0180d50a47bc502dafcaa09df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayerOnInteract
+  playerCamera: {fileID: 1966424857}
 --- !u!1 &683234047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,6 +2316,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a1f89617c66eb34eb0d5a4cdd290634, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1474810204}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a1f89617c66eb34eb0d5a4cdd290634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474810205}
   m_SourcePrefab: {fileID: 100100000, guid: 8a1f89617c66eb34eb0d5a4cdd290634, type: 3}
 --- !u!4 &1474810199 stripped
 Transform:
@@ -2325,12 +2343,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConductorInteractable
   promptText: Interact
+  facePlayer: {fileID: 1474810205}
   noFareBarks:
   - Well... get on with it.
+  - I ain't got all day.
   useMachineBarks:
   - Well that ticket aint gonna use itself.
   postUnlockBarks:
   - Go check the vent.
+  - What are you still going here.
 --- !u!114 &1474810202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,6 +2460,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.7632968, y: 11.163276, z: 2.5206292}
   m_Center: {x: 0.01571226, y: 5.0816383, z: 0.18869667}
+--- !u!114 &1474810205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474810200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739619b0180d50a47bc502dafcaa09df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayerOnInteract
+  playerCamera: {fileID: 1966424857}
 --- !u!1001 &1505528975
 PrefabInstance:
   m_ObjectHideFlags: 0

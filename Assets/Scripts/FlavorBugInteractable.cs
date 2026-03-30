@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FlavorBugInteractable : BaseInteractable
 {
+    [SerializeField] private FacePlayerOnInteract facePlayer;
     public override void Interact()
     {
         if (StoryTextUI.Instance != null && StoryTextUI.Instance.IsShowing)
@@ -9,6 +10,8 @@ public class FlavorBugInteractable : BaseInteractable
 
         if (GameState.Instance == null)
             return;
+
+        facePlayer?.FaceOnce();
 
         GameState gs = GameState.Instance;
 

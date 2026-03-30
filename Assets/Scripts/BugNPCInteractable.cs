@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 public class BugNPCInteractable : BaseInteractable
 {
+    [Header("Face Player")]
+    [SerializeField] private FacePlayerOnInteract facePlayer;
+
     [Header("When Player Is Big")]
     [SerializeField] private List<string> bigSizeLines = new List<string> { "Ew, a bug." };
 
@@ -40,6 +43,8 @@ public class BugNPCInteractable : BaseInteractable
 
         if (GameState.Instance == null)
             return;
+            
+        facePlayer?.FaceOnce();
 
         GameState gs = GameState.Instance;
 
