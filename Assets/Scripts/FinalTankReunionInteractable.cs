@@ -26,13 +26,23 @@ public class FinalTankReunionInteractable : BaseInteractable
             return;
         }
 
-        StoryTextUI.Instance?.ShowLines(
-            "Thanks again for helping me get back.",
-            "I think I'll stay close to the tank from now on...",
-            "I'm not built for the outside world..."
-        );
+        if (!gs.finalTankConversationDone)
+        {
+            gs.finalTankConversationDone = true;
 
-        ObjectiveUI.Instance?.SetObjective("Everything is back to normal.");
+            StoryTextUI.Instance?.ShowLines(
+                "Thanks again for helping me get back.",
+                "I think I'll stay close to the tank from now on...",
+                "I'm not built for the outside world..."
+            );
+
+            ObjectiveUI.Instance?.SetObjective("Everything is back to normal.");
+            return;
+        }
+
+        StoryTextUI.Instance?.ShowLines(
+            "I'm just glad to be home."
+        );
 
         if (visualState != null)
             visualState.Refresh();

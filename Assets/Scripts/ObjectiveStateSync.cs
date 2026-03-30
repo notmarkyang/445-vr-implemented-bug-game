@@ -50,7 +50,7 @@ public class ObjectiveStateSync : MonoBehaviour
             return "Check the table.";
 
         if (!gs.talkedToTankBug && !gs.isSmall)
-            return "Shrink down and explore the tank.";
+            return "Shrink down and get to the tank.";
 
         if (!gs.talkedToTankBug && gs.isSmall)
             return "Explore the tank.";
@@ -82,11 +82,11 @@ public class ObjectiveStateSync : MonoBehaviour
         if (gs.freedMissingBug && !gs.talkedToFreedBug)
             return "Talk to the bug.";
 
-        if (gs.talkedToFreedBug && gs.bugReturnedToTank)
+        if (gs.bugReturnedToTank && !gs.finalTankConversationDone)
             return "Go back to the tank.";
 
-        if (gs.bugReturnedToTank)
-            return "Return to the tank.";
+        if (gs.finalTankConversationDone)
+            return "Yipeeee.";
 
         return "";
     }

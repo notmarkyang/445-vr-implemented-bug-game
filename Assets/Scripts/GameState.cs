@@ -30,7 +30,7 @@ public class GameState : MonoBehaviour
 
     [Header("Final Progress")]
     public bool bugReturnedToTank = false;
-
+    public bool finalTankConversationDone = false;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -63,6 +63,7 @@ public class GameState : MonoBehaviour
         freedMissingBug = false;
 
         bugReturnedToTank = false;
+        finalTankConversationDone = false;
     }
 
     public void SetSmallState(bool small)
@@ -112,6 +113,5 @@ public class GameState : MonoBehaviour
     public void FreeMissingBug()
     {
         freedMissingBug = true;
-        bugReturnedToTank = true;
     }
 }
