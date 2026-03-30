@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "445 VR implemented Bug Game.slnx"
+    "dotnet.defaultSolution": "445-VR-implemented-Bug-Game.slnx"
 }
