@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - XRRig
+  - Flashlight
+  - GiantFlashlight
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - obstacle
+  - Player
+  - Web
   - 
   - 
   - 

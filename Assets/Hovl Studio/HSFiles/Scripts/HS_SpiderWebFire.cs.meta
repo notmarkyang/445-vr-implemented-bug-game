@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5b3dbce4317186a49b353ee7b0ebcbbe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348496
+  packageName: Flammable spider web
+  packageVersion: 1.0
+  assetPath: Assets/Hovl Studio/HSFiles/Scripts/HS_SpiderWebFire.cs
+  uploadId: 831330

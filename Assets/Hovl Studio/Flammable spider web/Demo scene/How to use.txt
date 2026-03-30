@@ -1,0 +1,2 @@
+If you want to use a specific collider to ignite the web, just add it to the script.
+If you don't want the web to ignite on mouse hover, then just disable the "Use mouse hover" setting in the script.
