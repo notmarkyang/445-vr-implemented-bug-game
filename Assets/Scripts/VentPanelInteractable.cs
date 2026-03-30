@@ -80,7 +80,7 @@ public class VentPanelInteractable : BaseInteractable
         }
 
         StoryTextUI.Instance?.ShowLines(
-            "Nothing else is trapped in here now."
+            "Umm.. I'd rather not."
         );
     }
 
