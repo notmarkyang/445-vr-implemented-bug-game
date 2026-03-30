@@ -5,6 +5,6 @@ public class BedroomSceneSetup : MonoBehaviour
     private void Start()
     {
         if (ObjectiveUI.Instance != null)
-            ObjectiveUI.Instance.SetObjective("Check on your friend’s bug.");
+            ObjectiveUI.Instance.SetObjective("Check on your friend’s bugs.");
     }
 }

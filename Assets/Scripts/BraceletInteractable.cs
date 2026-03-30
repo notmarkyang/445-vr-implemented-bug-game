@@ -25,9 +25,11 @@ public class BraceletInteractable : BaseInteractable
         GameState.Instance.CollectBracelet();
 
         StoryTextUI.Instance?.ShowLines(
-            "Ah right, our friend said something about this bracelet...",
+            "Ah right, here it is.",
             "I think this lets me shrink.",
-            "I should try it somewhere safe."
+            "Let's see...",
+            @"""[Left trigger] to shrink in size.""",
+            "Okay... Let's give this a try."
         );
 
         ObjectiveUI.Instance?.SetObjective("Shrink down and get to the tank.");
