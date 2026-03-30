@@ -7,8 +7,12 @@ public class SpiderStateController : MonoBehaviour
     public SpiderAlertSystem alertSystem;
     public SpiderVisionDetector visionDetector;
     public NavMeshAgent agent;
-    public Transform player;
-    public PlayerRespawn playerRespawn;
+
+    [Header("Player Auto Find")]
+    [SerializeField] private string playerTag = "Player";
+
+    private Transform player;
+    private PlayerRespawn playerRespawn;
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
@@ -30,13 +34,20 @@ public class SpiderStateController : MonoBehaviour
     public bool hasStoredYellowTarget = false;
     public int currentPatrolIndex = 0;
 
+    [Header("Runtime Debug")]
+    [SerializeField] private bool playerFound = false;
+    [SerializeField] private bool playerRespawnFound = false;
+
     private SpiderAlertSystem.AlertState previousState;
     private float patrolWaitTimer = 0f;
     private float investigateWaitTimer = 0f;
 
     void Start()
     {
-        if (agent == null) agent = GetComponent<NavMeshAgent>();
+        if (agent == null)
+            agent = GetComponent<NavMeshAgent>();
+
+        FindPlayerReferences();
 
         if (alertSystem != null)
             previousState = alertSystem.currentState;
@@ -46,6 +57,15 @@ public class SpiderStateController : MonoBehaviour
 
     void Update()
     {
+        // 如果玩家是跨场景后来才出现，这里会持续补找
+        if (player == null || playerRespawn == null)
+        {
+            FindPlayerReferences();
+        }
+
+        playerFound = (player != null);
+        playerRespawnFound = (playerRespawn != null);
+
         if (alertSystem == null || agent == null) return;
 
         SpiderAlertSystem.AlertState currentState = alertSystem.currentState;
@@ -55,6 +75,19 @@ public class SpiderStateController : MonoBehaviour
         CheckCatchPlayer(currentState);
 
         previousState = currentState;
+    }
+
+    void FindPlayerReferences()
+    {
+        GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
+
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+
+            if (playerRespawn == null)
+                playerRespawn = playerObj.GetComponent<PlayerRespawn>();
+        }
     }
 
     void HandleStateTransitions(SpiderAlertSystem.AlertState currentState)
@@ -151,8 +184,7 @@ public class SpiderStateController : MonoBehaviour
             // 到点后先短暂停一下
             if (investigateWaitTimer >= investigateWaitTime)
             {
-                // 这里先不强制改状态
-                // 状态交给 alertSystem 自己随着 alertValue 下降变回 Green
+                // 状态仍然交给 alertSystem 自己控制
             }
         }
         else
