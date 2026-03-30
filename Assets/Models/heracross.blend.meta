@@ -3,7 +3,12 @@ guid: 230da8e756d454e48856f279cfadfe4a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HText
+    second: {fileID: 2100000, guid: 70a5bb542b10bd841a314d3ad44fb3c8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
