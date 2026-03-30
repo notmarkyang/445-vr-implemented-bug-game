@@ -529,13 +529,10 @@ RectTransform:
   - {fileID: 852701521}
   - {fileID: 1271566740}
   - {fileID: 1104827815}
-  - {fileID: 604730457}
   - {fileID: 1117958857}
   - {fileID: 496185710}
   - {fileID: 405888715}
   - {fileID: 396938459}
-  - {fileID: 632891137}
-  - {fileID: 248241721}
   - {fileID: 1819020237}
   m_Father: {fileID: 24968103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -827,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80499ef553f1c4348bc0fde055f12535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XRInteractBridge
-  targetBehaviour: {fileID: 0}
+  targetBehaviour: {fileID: 74065988}
 --- !u!114 &74065988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,7 +2854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c6b33e2ea159849bd67648333f5737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityButton
-  loadingCircle: {fileID: 130652608}
+  loadingCircle: {fileID: 0}
   activationTime: 1
   onActivated:
     m_PersistentCalls:
@@ -2906,9 +2903,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 286430081}
-  - {fileID: 130652610}
+  m_Children: []
   m_Father: {fileID: 49713438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2972,7 +2967,7 @@ MonoBehaviour:
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1147901600}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WristStorageZone, Assembly-CSharp
         m_MethodName: TriggerScanPulse
         m_Mode: 1
@@ -3177,7 +3172,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 248241721}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3419,7 +3414,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1640609744}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3550,11 +3545,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 675955473}
   - {fileID: 1818169519}
   - {fileID: 1947779037}
   - {fileID: 184021888}
-  - {fileID: 640442299}
   m_Father: {fileID: 49713438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3579,7 +3572,7 @@ MonoBehaviour:
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 108361440}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimeSlowAbility, Assembly-CSharp
         m_MethodName: TryActivateSlowMode
         m_Mode: 1
@@ -3967,6 +3960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9059786329452581396, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4001,19 +3998,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       insertIndex: -1
       addedObject: {fileID: 108361437}
-    - targetCorrespondingSourceObject: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 108361441}
-    - targetCorrespondingSourceObject: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 108361440}
-    - targetCorrespondingSourceObject: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 108361439}
     - targetCorrespondingSourceObject: {fileID: 5518899284880179291, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1159470653}
   m_SourcePrefab: {fileID: 100100000, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+--- !u!4 &581937055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917674758240283209, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 581937054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &585212212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4908,7 +4901,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1175461192}
-  m_Father: {fileID: 129003292}
+  m_Father: {fileID: 581937055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &721265572
 Rigidbody:
@@ -5336,7 +5329,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1715175273}
-  - {fileID: 1989782943}
   m_Father: {fileID: 1555322018}
   m_LocalEulerAnglesHint: {x: -180, y: 90, z: -90}
   m_AnchorMin: {x: 0, y: 0}
@@ -5695,8 +5687,7 @@ Transform:
   m_LocalPosition: {x: 0.009, y: 0.10100002, z: -0.023000136}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2001778658}
+  m_Children: []
   m_Father: {fileID: 918086810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &837576299
@@ -5870,7 +5861,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_InputActionReferencePerformed: {fileID: 306892607}
-    m_InputActionReferenceValue: {fileID: 958778746}
+    m_InputActionReferenceValue: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -5890,7 +5881,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 1603566463}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
 --- !u!114 &837576300
@@ -6548,12 +6539,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1151712340}
-  - {fileID: 1984639814}
   - {fileID: 24968103}
   - {fileID: 837576298}
   - {fileID: 1518802013}
-  - {fileID: 1147901602}
   - {fileID: 816860547}
   m_Father: {fileID: 491295877}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -7664,7 +7652,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1879573429}
-  - {fileID: 661373284}
   m_Father: {fileID: 49713438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7684,12 +7671,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c6b33e2ea159849bd67648333f5737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityButton
-  loadingCircle: {fileID: 661373285}
+  loadingCircle: {fileID: 0}
   activationTime: 1
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 108361441}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VRScenePortal, Assembly-CSharp
         m_MethodName: EnterShrinkMode
         m_Mode: 1
@@ -7752,7 +7739,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 940192795}
   - {fileID: 742689629}
   m_Father: {fileID: 49713438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7778,7 +7764,7 @@ MonoBehaviour:
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 108361441}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VRScenePortal, Assembly-CSharp
         m_MethodName: ReturnToMainScene
         m_Mode: 1
@@ -8553,7 +8539,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 604730457}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9605,7 +9591,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 604730457}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10070,7 +10056,7 @@ MonoBehaviour:
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 108361441}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VRScenePortal, Assembly-CSharp
         m_MethodName: SelectVent
         m_Mode: 1
@@ -10793,7 +10779,6 @@ Transform:
   m_LocalScale: {x: 1.0651027, y: 1.0651027, z: 1.0651027}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1640609744}
   - {fileID: 1555322018}
   m_Father: {fileID: 918086810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11014,8 +10999,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 252578622}
-  - {fileID: 1595591196}
   - {fileID: 727933769}
   m_Father: {fileID: 1819020237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11041,7 +11024,7 @@ MonoBehaviour:
   onActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 108361441}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: VRScenePortal, Assembly-CSharp
         m_MethodName: SelectTank
         m_Mode: 1
@@ -11108,7 +11091,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 766950951}
-  - {fileID: 156221734}
   m_Father: {fileID: 1518802013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555322019
@@ -11126,13 +11108,13 @@ MonoBehaviour:
   cardTag: Card
   screwdriverTag: Screwdriver
   flashlightTag: Flashlight
-  snapPoint: {fileID: 156221734}
+  snapPoint: {fileID: 0}
   storeDuration: 2
   successMessageDuration: 1
   outerZone: {fileID: 0}
   boxUI: {fileID: 766950950}
   statusText: {fileID: 1715175274}
-  progressBar: {fileID: 1989782944}
+  progressBar: {fileID: 0}
 --- !u!65 &1555322020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12232,7 +12214,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 248241721}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12547,6 +12529,7 @@ Transform:
   - {fileID: 672128326}
   - {fileID: 142740513}
   - {fileID: 522495928}
+  - {fileID: 3932720433575535018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765630128
@@ -12798,7 +12781,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 632891137}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12947,7 +12930,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1554336308}
-  - {fileID: 662601944}
   - {fileID: 1354115954}
   m_Father: {fileID: 49713438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15614,4 +15596,12 @@ SceneRoots:
   - {fileID: 615551316}
   - {fileID: 879909831}
   - {fileID: 119197344}
-  - {fileID: 1380462920} 
+  - {fileID: 1380462920}
+  - {fileID: 427032448}
+  - {fileID: 436725300}
+  - {fileID: 454695813}
+  - {fileID: 1178532777}
+  - {fileID: 1311282777}
+  - {fileID: 1359050221}
+  - {fileID: 1697603145}
+  - {fileID: 1812317075}
