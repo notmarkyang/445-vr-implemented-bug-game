@@ -20,7 +20,7 @@ public class BedroomTankInteractable : BaseInteractable
 
             StoryTextUI.Instance?.ShowLines(
                 "One of the bugs is missing...",
-                "I think my friend left something behind.",
+                "I think my friend left someething for me in case this happens.",
                 "It should be on the nightstand."
             );
 
