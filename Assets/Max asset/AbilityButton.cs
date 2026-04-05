@@ -5,18 +5,17 @@ using UnityEngine.Events;
 public class AbilityButton : MonoBehaviour
 {
     [Header("UI 引用")]
-    public Image loadingCircle;      // 拖入该按钮对应的加载圆圈
-    public float activationTime = 1.0f; // 触发所需时间
+    public Image loadingCircle;      
+    public float activationTime = 1.0f; 
 
     [Header("功能设置")]
-    public UnityEvent onActivated;   // 进度满后执行的函数（比如换场景）
+    public UnityEvent onActivated;
 
     private float timer = 0f;
     private bool isHandInside = false;
 
     void Start()
     {
-        // 初始状态隐藏加载圈
         if (loadingCircle != null)
         {
             loadingCircle.gameObject.SetActive(false);
