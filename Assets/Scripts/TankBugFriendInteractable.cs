@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TankBugFriendInteractable : BaseInteractable
 {
+    [SerializeField] private FacePlayerOnInteract facePlayer;
     public override void Interact()
     {
         if (StoryTextUI.Instance != null && StoryTextUI.Instance.IsShowing)
@@ -9,7 +10,7 @@ public class TankBugFriendInteractable : BaseInteractable
 
         if (GameState.Instance == null)
             return;
-
+        facePlayer?.FaceOnce();
         GameState gs = GameState.Instance;
 
         // Can only talk to bugs while small
@@ -69,13 +70,15 @@ public class TankBugFriendInteractable : BaseInteractable
         {
             StoryTextUI.Instance?.ShowLines(
                 "You found them?",
-                "I knew you'd bring them back safe."
+                "Ugh.",
+                "*Coughs*",
+                "I-I mean yippeee!"
             );
             return;
         }
 
         StoryTextUI.Instance?.ShowLines(
-            "Thanks again for helping everyone."
+            "Thanks for helping everyone."
         );
     }
 }
